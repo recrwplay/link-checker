@@ -1,0 +1,28 @@
+{
+  "name": "link-checker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mogztter/link-checker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mogztter/link-checker/issues"
+  },
+  "homepage": "https://github.com/Mogztter/link-checker#readme",
+  "dependencies": {
+    "bestikk-download": "^1.0.0",
+    "bestikk-fs": "^1.0.0",
+    "express": "^4.17.1",
+    "find-cache-dir": "^3.3.1",
+    "portfinder": "^1.0.28",
+    "yauzl": "^2.10.0"
+  }
+}
