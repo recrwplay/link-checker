@@ -1,6 +1,6 @@
 {
   "name": "@neo4j-documentation/link-checker",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "bin": {
     "link-checker": "bin/link-checker"
