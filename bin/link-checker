@@ -7,7 +7,7 @@ const { run } = require('../lib/lint-links.js')
 
 process.title = 'link-checker'
 
-function collect (value, previous) {
+function collect(value, previous) {
   return previous.concat([value])
 }
 
@@ -16,8 +16,13 @@ const program = new commander.Command()
   .option('-r, --redirect <from=to>', 'a redirection from source to dest directory', collect, [])
   .option('--static <route=staticRootDir>', 'static assets directory')
   .option('--skip-file <file>', 'a file that contains a list of URLs to skip (one regular expression per line)')
-  .action((dir) => {
-      run(dir, program.opts())
+  .action(async (dir) => {
+    try {
+      await run(dir, program.opts())
+    } catch (err) {
+      console.error('Something went wrong!', err)
+      process.exit(1)
+    }
   })
 
 program.parse(process.argv)
