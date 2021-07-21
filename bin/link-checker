@@ -13,8 +13,8 @@ function collect(value, previous) {
 
 const program = new commander.Command()
   .arguments('<dir>')
-  .option('-r, --redirect <from=to>', 'a redirection from source to dest directory', collect, [])
-  .option('--static <route=staticRootDir>', 'static assets directory')
+  .option('-r, --redirect <from=to>', 'a redirection from source to destination directory', collect, [])
+  .option('--static <route=staticRootDir>', 'a route that serves static assets (from a directory)')
   .option('--skip-file <file>', 'a file that contains a list of URLs to skip (one regular expression per line)')
   .action(async (dir) => {
     try {
